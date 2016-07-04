@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Signup{% endblock %}
+
+{% block content %}		
+	<h1>Signup</h1>
+	<form method="post">
+		<table>
+			<tbody>
+				<tr>
+					<td>Username</td>
+					<td><input type="text" name="username"></td>
+					<td>{{signError.username_error}}</td>
+				</tr>
+				<tr><td>Password</td>
+					<td><input type="text" name="password"></td>
+					<td>{{signError.password_error}}</td>
+				</tr>
+				<tr><td>Verify Password</td>
+					<td><input type="text" name="verify"></td>
+					<td>{{signError.verify_error}}</td>
+				</tr>
+				<tr>
+					<td>Email(optional)</td>
+					<td><input type="text" name="email"></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="submit" value="Submit">
+	</form>
+{% endblock %}
+
+

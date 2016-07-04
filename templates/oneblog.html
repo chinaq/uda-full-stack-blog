@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Newest Blog{% endblock %}
+
+{% block content %}		
+	<h1>Newest Blog</h1>
+	<br>
+	<br>
+
+	<div class="blog">
+		<div class="blog-title">{{title}}</div>
+		<pre class="blog-body">{{body}}</pre>
+		<a href="/edit/{{id}}">Edit</a>
+	</div>
+{% endblock %}
