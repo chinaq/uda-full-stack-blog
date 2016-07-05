@@ -2,7 +2,33 @@
 {% block title %}Signup{% endblock %}
 
 {% block content %}		
-	<h1>Signup</h1>
+
+	<div>
+		<form method="post">
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" class="form-control" id="username" name="username">
+				<div class="error">{{signError.username_error}}</div>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" name="password" id="password">
+				<div class="error">{{signError.password_error}}</div>
+			</div>
+			<div class="form-group">
+				<label for="verify">Verify Passwor</label>
+				<input type="password" class="form-control" name="verify" id="verify">
+				<div class="error">{{signError.verify_error}}</div>
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" class="form-control" name="email" id="email">
+			</div>
+			<button type="submit" class="btn btn-default">Signup</button>
+		</form>
+	</div>
+
+	<!--<h1>Signup</h1>
 	<form method="post">
 		<table>
 			<tbody>
@@ -26,7 +52,7 @@
 			</tbody>
 		</table>
 		<input type="submit" value="Submit">
-	</form>
+	</form>-->
 {% endblock %}
 
 

@@ -2,16 +2,30 @@
 {% block title %}Edit Blog{% endblock %}
 
 {% block content %}		
-	<h1>Edit Blog</h1>
+	<div class="error">{{error}}</div>
+	<div>
+		<form method="post">
+			<div class="form-group">
+				<label for="body">{{title}}</label>
+				<textarea class="form-control" rows="5" name="body" id="body">{{body}}</textarea>
+			</div>
+	        <input class="hidden" name="id" type="text" value="{{id}}">
+			<button type="submit" class="btn btn-default">Edit</button>
+			<a class="btn" href="/{{id}}" >cancel</a>
+		</form>
+	</div>
+
+
+	<!--<h1>Edit Blog</h1>
 	<br>
 	<br>
 
 	<form class="blog" method="post">
 		<div class="blog-title">{{title}}</div>
-        <!--<input class="hidden" name="id" type="text" value="{{id}}">-->
+        <input class="hidden" name="id" type="text" value="{{id}}">
 		<input class="blog-body" name="body" type="text" value="{{body}}">
         <div class="error">{{error}}</div>
         <input class="btn" type="submit" value="confirm">
         <a class="btn" href="/{{id}}" >cancel</a>
-	</form>
+	</form>-->
 {% endblock %}

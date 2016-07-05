@@ -2,15 +2,11 @@
 {% block title %}Blogs{% endblock %}
 
 {% block content %}		
-	<h1>Blogs</h1>
-	<a href="/newpost">New Post</a>
-	<br>
-	<br>
-
 	{% for blog in blogs %}
-		<div class="blog">
-			<div class="blog-title"><a href="/{{blog.key().id()}}">{{blog.title}}</a></div>
-			<pre class="blog-body">{{blog.body}}</pre>
+		<div class="blog-post">
+			<h2 class="blog-post-title"><a href="/{{blog.key().id()}}">{{blog.title}}</a></h2>
+			<p class="blog-post-meta">created by {{blog.owner}}</p>
+			<p class="blog-body">{{blog.body}}</p>
 		</div>
 		<hr>
 	{% endfor %}

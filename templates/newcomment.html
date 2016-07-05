@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Newest Blog{% endblock %}
+
+{% block content %}
+	<div class="error">{{error}}</div>
+	<div>
+		<form method="post">
+			<div class="form-group">
+				<label for="body">Comment to {{blog_title}}</label>
+				<textarea class="form-control" rows="5" name="body" id="body">{{body}}</textarea>
+			</div>
+			<button type="submit" class="btn btn-default">Add</button>
+		</form>
+	</div>
+
+	<!--<h1>New Comment</h1>
+	<br>
+	<br>
+
+	<form method="post">
+		<label>
+			<div>Add comment to {{blog_title}}</div>
+			<textarea name="body">{{body}}</textarea>
+		</label>
+		<div class="error">{{error}}</div>
+		<input type="submit" value="Add">
+	</form>-->
+{% endblock %}

@@ -2,20 +2,32 @@
 {% block title %}New Post{% endblock %}
 
 {% block content %}		
-	<h1>New Post</h1>
-	<br>
-	<br>
+	<div class="error">{{error}}</div>
+	<div>
+		<form method="post">
+			<div class="form-group">
+				<label for="title">Title</label>
+				<input type="text" class="form-control" id="title" name="subject">
+			</div>
+			<div class="form-group">
+				<label for="body">Content</label>
+				<textarea class="form-control" rows="5" name="content" id="body">{{body}}</textarea>
+			</div>
+			<button type="submit" class="btn btn-default">New Post</button>
+		</form>
+	</div>
 
-	<form method="post">
+
+	<!--<form method="post">
 		<label>
 			<div>title</div>
 			<input type="text" name="subject" value="{{title}}">
 		</label>
 		<label>
 			<div>body</div>
-			<textarea name="content">{{body}}</textarea>
+			<textarea class="form-control" rows="5" name="content">{{body}}</textarea>
 		</label>
 		<div class="error">{{error}}</div>
-		<input type="submit" value="Add">
-	</form>
+		<input type="submit" value="New Post">
+	</form>-->
 {% endblock %}
